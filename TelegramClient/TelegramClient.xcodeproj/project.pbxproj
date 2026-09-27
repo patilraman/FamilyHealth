@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,7 @@
 		A1000016 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000006 /* ChatView.swift */; };
 		A1000017 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000007 /* SettingsView.swift */; };
 		A1000018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000008 /* Assets.xcassets */; };
-		A1000030 /* TDLibKit in Frameworks */ = {isa = PBXBuildFile; productRef = A1000029 /* TDLibKit */; };
+		C238BA313068CB2A009B3C7F /* TDLibKit in Frameworks */ = {isa = PBXBuildFile; productRef = C238BA303068CB2A009B3C7F /* TDLibKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000030 /* TDLibKit in Frameworks */,
+				C238BA313068CB2A009B3C7F /* TDLibKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			);
 			name = TelegramClient;
 			packageProductDependencies = (
-				A1000029 /* TDLibKit */,
+				C238BA303068CB2A009B3C7F /* TDLibKit */,
 			);
 			productName = TelegramClient;
 			productReference = A100000A /* TelegramClient.app */;
@@ -126,7 +126,8 @@
 			);
 			mainGroup = A100000C;
 			packageReferences = (
-				A1000028 /* XCRemoteSwiftPackageReference "TDLibKit" */,
+				C2519F993068CABE007F36EE /* XCLocalSwiftPackageReference "../../TDLibFramework" */,
+				C238BA2F3068CB2A009B3C7F /* XCLocalSwiftPackageReference "../../TDLibKit" */,
 			);
 			productRefGroup = A100000D /* Products */;
 			projectDirPath = "";
@@ -216,6 +217,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 299R4WD3A3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = App/Info.plist;
@@ -246,6 +248,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 299R4WD3A3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = App/Info.plist;
@@ -292,21 +295,20 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		A1000028 /* XCRemoteSwiftPackageReference "TDLibKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swiftgram/TDLibKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		C238BA2F3068CB2A009B3C7F /* XCLocalSwiftPackageReference "../../TDLibKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../TDLibKit;
 		};
-/* End XCRemoteSwiftPackageReference section */
+		C2519F993068CABE007F36EE /* XCLocalSwiftPackageReference "../../TDLibFramework" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../TDLibFramework;
+		};
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A1000029 /* TDLibKit */ = {
+		C238BA303068CB2A009B3C7F /* TDLibKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A1000028 /* XCRemoteSwiftPackageReference "TDLibKit" */;
 			productName = TDLibKit;
 		};
 /* End XCSwiftPackageProductDependency section */

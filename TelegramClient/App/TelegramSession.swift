@@ -310,7 +310,9 @@ final class TelegramSession: ObservableObject {
                 offset: 0,
                 onlyLocal: false
             )
-            let mapped = history.messages.reversed().map(ChatMessage.init(message:))
+            //let mapped = history.messages.reversed().map(ChatMessage.init(message:))
+            let mapped = (history.messages ?? []).reversed().map(ChatMessage.init(message:))
+
             await MainActor.run { self.messages = mapped }
         } catch {
             await MainActor.run { self.lastError = "Failed to load history: \(error.localizedDescription)" }
@@ -381,7 +383,7 @@ struct ChatMessage: Identifiable, Equatable {
     let id: Int64
     let text: String
     let isOutgoing: Bool
-    let date: Date
+    let date: Foundation.Date
 
     init(message: Message) {
         self.id = message.id
